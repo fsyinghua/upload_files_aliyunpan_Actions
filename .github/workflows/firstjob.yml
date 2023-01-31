@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: TEST_UPLOAD_FILE
 
 # Controls when the workflow will run
 on:
@@ -50,5 +50,5 @@ jobs:
           aliyunpan-cli -h
           date -u > log.txt
           echo "test upload" >> log.txt
-          aliyun upload ./log.txt
+          aliyunpan upload ./log.txt
           sudo echo bye          
