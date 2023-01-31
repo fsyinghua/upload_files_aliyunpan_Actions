@@ -52,5 +52,6 @@ jobs:
           date -u >> log.txt
           aliyunpan tree >> log.txt
           aliyunpan tree
-          echo "end" >> log.txt          
+          echo "end" >> log.txt
+          date -u >> log.txt
           aliyunpan upload log.txt
