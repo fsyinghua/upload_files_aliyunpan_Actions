@@ -43,8 +43,8 @@ jobs:
           sudo pip install aliyunpan
           sudo echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  ~/.config/aliyunpan.yaml
           sudo aliyunpan-cli -h
-          sudo date -l > log.txt
-          sudo echo "test upload"
+          sudo date -u > log.txt
+          sudo echo "test upload" >> log.txt
           sudo aliyun upload ./log.txt
           sudo echo bye
           
