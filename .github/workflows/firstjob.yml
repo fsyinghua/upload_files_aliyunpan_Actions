@@ -20,7 +20,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Prepare_OS:
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -31,21 +31,24 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo OS ready
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Install python3 and aliyunpan
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo OS Ready,
+          echo Update patch an.
           sudo apt update -y
           sudo apt install -y python3
           sudo pip install aliyunpan
-          sudo echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  ~/.config/aliyunpan.yaml
-          sudo aliyunpan-cli -h
-          sudo date -u > log.txt
-          sudo echo "test upload" >> log.txt
-          sudo aliyun upload ./log.txt
-          sudo echo bye
           
-          
+      # Runs a set of commands using the runners shell   
+      - name: test upload a file to aliyunpan
+        run: |
+          mkdir -p ./.config/
+          echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  .config/aliyunpan.yaml
+          aliyunpan-cli -h
+          date -u > log.txt
+          echo "test upload" >> log.txt
+          aliyun upload ./log.txt
+          sudo echo bye          
