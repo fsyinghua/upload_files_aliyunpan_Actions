@@ -38,15 +38,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sudo -i
-          apt update -y
-          apt install -y python3,pip3
-          pip install aliyunpan
-          echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  ~/.config/aliyunpan.yaml
-          aliyunpan-cli -h
-          date -l > log.txt
-          echo "test upload"
-          aliyun upload ./log.txt
-          echo bye
+          sudo apt update -y
+          sudo apt install -y python3 pip3
+          sudo pip install aliyunpan
+          sudo echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  ~/.config/aliyunpan.yaml
+          sudo aliyunpan-cli -h
+          sudo date -l > log.txt
+          sudo echo "test upload"
+          sudo aliyun upload ./log.txt
+          sudo echo bye
           
           
