@@ -1,5 +1,5 @@
 # 简单上传一个文件到阿里云盘
-Actions 文件：.github/basic.yml
+Actions 文件：.github/workflow/basic.yml
 需要先从阿里云盘获得自己的secret
 在settings里面添加Seret:  ALIYUNPAN_SERET
 并粘贴阿里云盘的seret
