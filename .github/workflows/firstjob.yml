@@ -20,7 +20,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  Prepare_OS:
+  Upload_file:
     # The type of runner that the job will run on
     runs-on: ubuntu-20.04
 
@@ -48,7 +48,9 @@ jobs:
           mkdir -p ./.config/
           echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  .config/aliyunpan.yaml
           aliyunpan-cli -h
-          date -u > log.txt
-          echo "test upload" >> log.txt
-          aliyunpan upload ./log.txt
+          echo "start" > log.txt
+          date -u >> log.txt
+          aliyunpan ls >> log.txt
+          echo end >>log.txt          
+          aliyunpan upload -f ./log.txt
           sudo echo bye          
