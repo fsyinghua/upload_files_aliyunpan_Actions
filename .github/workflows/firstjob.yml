@@ -51,6 +51,7 @@ jobs:
           echo "start" > log.txt
           date -u >> log.txt
           aliyunpan ls >> log.txt
+          aliyunpan ls
           echo "end" >> log.txt          
-          aliyunpan upload log.txt
-          sudo echo bye          
+          ls
+          echo "bye"          
