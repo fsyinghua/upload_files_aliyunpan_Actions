@@ -46,7 +46,7 @@ jobs:
       - name: test upload a file to aliyunpan
         run: |
           mkdir -p ~/.config/
-          echo "refresh_token: '${{ secrets.GITHUB_TOKEN }}'"  >  ~/.config/aliyunpan.yaml
+          echo "refresh_token: '${{ secrets.ALIYUNPAN_SECRET }}'"  >  ~/.config/aliyunpan.yaml
           aliyunpan-cli -h
           echo "start" > log.txt
           date -u >> log.txt
