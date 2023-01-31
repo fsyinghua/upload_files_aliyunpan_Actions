@@ -6,6 +6,6 @@ Actions 文件：.github/workflow/basic.yml <br>
 在settings里面添加Seret:  ALIYUNPAN_SERET <br>
 并粘贴阿里云盘的seret <br>
 命令参考网址：https://pypi.org/project/aliyunpan/ <br>
-具体上传文件请修改./github/basic.yml <br>
+具体上传文件请修改.github/workflow/basic.yml <br>
 这里我上传的文件是 log.txt m<br>
 
