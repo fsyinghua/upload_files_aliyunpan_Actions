@@ -50,8 +50,7 @@ jobs:
           aliyunpan-cli -h
           echo "start" > log.txt
           date -u >> log.txt
-          aliyunpan ls >> log.txt
-          aliyunpan ls
+          aliyunpan tree >> log.txt
+          aliyunpan tree
           echo "end" >> log.txt          
-          ls
-          echo "bye"          
+          aliyunpan upload log.txt
