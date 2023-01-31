@@ -46,4 +46,4 @@ jobs:
           aliyunpan tree
           echo "end" >> log.txt
           date -u >> log.txt
-          aliyunpan upload log.txt
+          aliyunpan upload log.txt --force
