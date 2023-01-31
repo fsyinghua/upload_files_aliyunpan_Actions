@@ -46,7 +46,7 @@ jobs:
       - name: test upload a file to aliyunpan
         run: |
           mkdir -p ~/.config/
-          echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  .config/aliyunpan.yaml
+          echo "refresh_token: '2edd50e5f46b4b45bcb51332626bfbbc'"  >  ~/.config/aliyunpan.yaml
           aliyunpan-cli -h
           echo "start" > log.txt
           date -u >> log.txt
